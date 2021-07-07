@@ -21,6 +21,7 @@ router.post("/register", async (req, res) => {
     // if succesfully posted, send status 200
     res.status(200).json(user);
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
@@ -40,6 +41,7 @@ router.post("/login", async (req, res) => {
     const { password, ...others } = user._doc;
     res.status(200).json(others);
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });

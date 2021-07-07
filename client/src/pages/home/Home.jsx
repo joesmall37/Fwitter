@@ -13,6 +13,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get("/posts" + search);
+      // set posts - to res.data
       setPosts(res.data);
     };
     fetchPosts();
@@ -21,6 +22,7 @@ export default function Home() {
     <>
       <Header />
       <div className="home">
+        {/* pass in the posts as props */}
         <Posts posts={posts} />
         <Sidebar />
       </div>
