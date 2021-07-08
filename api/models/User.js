@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema(
   {
-
     username: {
       type: String,
       required: true,
@@ -13,14 +12,12 @@ const UserSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-
     password: {
       type: String,
       required: true,
     },
     profilePic: {
       type: String,
-      // default empty if they don't decide to upload one
       default: "",
     },
   },

@@ -11,21 +11,14 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    // future development we'll add photo and video for posts
-    // video: {
-    //
-    //   type: String,
-    //   required: false,
-    // },
-    // photo: {
-    //   type: String,
-    //   required: false,
-    // },
+    photo: {
+      type: String,
+      required: false,
+    },
     username: {
       type: String,
       required: true,
     },
-    // categories for posts
     categories: {
       type: Array,
       required: false,

@@ -5,7 +5,7 @@ import "./topbar.css";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:3001/images/"
+  const PF = "http://localhost:5000/images/"
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -14,24 +14,25 @@ export default function TopBar() {
     <div className="top">
       <div className="topLeft">
         <i className="topIcon fab fa-twitter-square"></i>
+        <h3>Eat and Tweet</h3>
       </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
-              Workout
+              Eat
             </Link>
           </li>
           <li className="topListItem">
             <Link className="link" to="/">
-              Eat Healthy
+              Sweat
             </Link>
           </li>
-          <li className="topListItem">
+          {/* <li className="topListItem">
             <Link className="link" to="/">
-             Connect
+
             </Link>
-          </li>
+          </li> */}
           <li className="topListItem">
             <Link className="link" to="/write">
               Tweet
@@ -45,18 +46,19 @@ export default function TopBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            <img className="topImg" src={PF+user.profilePic} alt="" />
+            {/* <img className="topImg" src={PF+user.profilePic} alt="" /> */}
+            <h3>Profile</h3>
           </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">
               <Link className="link" to="/login">
-                Login to your account
+                LOGIN
               </Link>
             </li>
             <li className="topListItem">
               <Link className="link" to="/register">
-                Create a Free Account
+                REGISTER
               </Link>
             </li>
           </ul>

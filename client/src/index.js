@@ -5,7 +5,6 @@ import { ContextProvider } from "./context/Context";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* wrap everything with context provider */}
     <ContextProvider>
       <App />
     </ContextProvider>

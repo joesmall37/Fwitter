@@ -3,11 +3,14 @@ import "./posts.css";
 
 export default function Posts({ posts }) {
   return (
+    <div>
+    <h1> My Feed</h1>
     <div className="posts">
-      {/* map over each post and call the post component */}
-      {posts.map((post) => (
-        <Post post={post} />
+
+      {posts.map((p) => (
+        <Post post={p} />
       ))}
-    </div>
+      </div>
+      </div>
   );
 }

@@ -16,7 +16,6 @@ export default function Write() {
       title,
       desc,
     };
-    // add a file for photo
     if (file) {
       const data =new FormData();
       const filename = Date.now() + file.name;
@@ -58,14 +57,14 @@ export default function Write() {
         </div>
         <div className="writeFormGroup">
           <textarea
-            placeholder="Tell your story..."
+            placeholder="Tweet here!"
             type="text"
             className="writeInput writeText"
             onChange={e=>setDesc(e.target.value)}
           ></textarea>
         </div>
         <button className="writeSubmit" type="submit">
-          Publish
+          Tweet
         </button>
       </form>
     </div>

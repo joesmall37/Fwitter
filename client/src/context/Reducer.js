@@ -1,5 +1,4 @@
 const Reducer = (state, action) => {
-  // pass in actions
   switch (action.type) {
     case "LOGIN_START":
       return {
