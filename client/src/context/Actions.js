@@ -1,7 +1,10 @@
+// first action
+// pass in usercredentials
 export const LoginStart = (userCredentials) => ({
+  // action name
   type: "LOGIN_START",
 });
-
+// pass in user
 export const LoginSuccess = (user) => ({
   type: "LOGIN_SUCCESS",
   payload: user,

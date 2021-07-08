@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-// const authRoute = require("./routes/api/auth");
+// const authRoute = require("./routes/auth");
 // const userRoute = require("./routes/api/users");
 // const postRoute = require("./routes/api/posts");
 // const categoryRoute = require("./routes/api/categories");
@@ -18,7 +18,8 @@ dotenv.config();
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 // routes
-app.use(routes);
+app.use("/",routes);
+// app.use(authRoute);
 
 const PORT = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/socialgym";
