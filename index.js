@@ -9,8 +9,9 @@ const multer = require("multer");
 const path = require("path");
 const session = require('express-session');
 dotenv.config();
-app.use(express.json());
-app.use("/images", express.static(path.join(__dirname, "/images")));
+
+
+const PORT = process.env.PORT || 5000;
 
 // mongoose
 //   .connect(process.env.MONGO_URL, {
@@ -19,15 +20,15 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 //     useCreateIndex: true,
 //     useFindAndModify:true
 //   })
-  mongoose.connect(
-     process.env.MONGODB_URI || 'mongodb://localhost/socialappwork',
-     {
-       useNewUrlParser: true,
-       useUnifiedTopology: true,
-       useCreateIndex: true,
-       useFindAndModify: false
-     }
-   )
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/socialappwork',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+)
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
@@ -48,6 +49,11 @@ const sessionOptions = {
   store
 };
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(session(sessionOptions));
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "images");
@@ -63,9 +69,10 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
-app.use(session(sessionOptions));
-const PORT = process.env.PORT || 5000;
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 
 app.listen(PORT, () => {
