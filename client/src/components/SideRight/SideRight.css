@@ -1,9 +1,8 @@
-.posts{
-    flex: 9;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
+body {
+  --twitter-color: #50b7f5;
+  --twitter-background: #e6ecf0;
 }
+
 
 .widgets {
   flex: 0.3;

@@ -1,3 +1,9 @@
+body {
+  --twitter-color: #50b7f5;
+  --twitter-background: #e6ecf0;
+}
+
+
 .register {
   height: calc(100vh - 50px);
   display: flex;
@@ -14,6 +20,7 @@
 
 .registerTitle {
   font-size: 50px;
+  color: var(--twitter-background);
 }
 
 .registerForm {
@@ -35,7 +42,7 @@
 .registerButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: navy;
+  background-color: var(--twitter-color);
   border: none;
   color: white;
   border-radius: 10px;
@@ -46,7 +53,7 @@
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: navy;
+  background-color: var(--twitter-color);
   cursor: pointer;
   border: none;
   padding: 10px;

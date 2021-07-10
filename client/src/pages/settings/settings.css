@@ -1,3 +1,8 @@
+body {
+  --twitter-color: #50b7f5;
+  --twitter-background: #e6ecf0;
+}
+
 .settings {
   display: flex;
 }
@@ -14,20 +19,22 @@
 }
 
 .settingsUpdateTitle {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: lightcoral;
+  font-size: 26px;
+  /* margin-bottom: 20px; */
+  cursor: pointer;
+  color: var(--twitter-color);
 }
 
 .settingsDeleteTitle {
-  color: red;
-  font-size: 12px;
+  color: var(--twitter-color);
+  font-size: 26px;
   cursor: pointer;
 }
 
 .settingsForm {
   display: flex;
   flex-direction: column;
+  color: var(--twitter-color);
 }
 
 .settingsPP {
@@ -47,7 +54,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: lightcoral;
+  background-color:var(--twitter-color);
   color: white;
   display: flex;
   align-items: center;
@@ -75,7 +82,7 @@
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: teal;
+    background-color: var(--twitter-color);
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;

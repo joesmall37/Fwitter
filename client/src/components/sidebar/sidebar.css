@@ -1,71 +1,26 @@
-/* .sidebar {
-  flex: 3;
-  margin: 20px;
-  padding-bottom: 30px;
-  background-color: #fdfbfb;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid navy;
+.sidebar {
+  border-right: 1px solid var(--twitter-background);
+  flex: 0.3;
+  /* min-width: 250px; */
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.sidebarItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.sidebar__twitterIcon {
+  color: var(--twitter-color);
+  font-size: 30px !important;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-.sidebarTitle {
-  margin: 10px;
-  padding: 5px;
-  width: 80%;
-  border-top: 1px solid #a7a4a4;
-  border-bottom: 1px solid #a7a4a4;
-  font-family:  sans-serif;
-  font-size: 12px;
-  color: #222;
-  font-weight: 600;
-  line-height: 20px;
-  text-align: center;
+.sidebar__tweet {
+  background-color: var(--twitter-color) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  height: 50px !important;
+  margin-top: 20px !important;
 }
-
-.sidebarItem > img {
-  margin-top: 15px;
-}
-
-.sidebarItem > p {
-  padding: 30px;
-}
-
-.sidebarList {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.sidebarListItem {
-  display: inline-block;
-  width: 50%;
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-.sidebarSocial {
-  margin-top: 15px;
-  width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sidebarIcon{
-    font-size: 16px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-img {
-  border-radius: 75%;
-  margin: 10px;
-  padding: 10px;
-  border: 3px solid navy;
-} */

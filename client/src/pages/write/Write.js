@@ -2,9 +2,9 @@ import { useContext, useState } from "react";
 import "./write.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import { Avatar } from "@material-ui/core";
 
 export default function Write() {
-  const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
@@ -13,7 +13,6 @@ export default function Write() {
     e.preventDefault();
     const newPost = {
       username: user.username,
-      title,
       desc,
     };
     if (file) {
@@ -23,20 +22,23 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post("api/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      const res = await axios.post("api/posts", newPost);
+      console.log(res.data)
+      window.location.replace("api/post/" + res.data._id);
     } catch (err) {}
   };
   return (
     <div className="write">
+
+      <Avatar src="https://images.pexels.com/photos/3490348/pexels-photo-3490348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
       {file && (
-        <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
+        <img className="tweetBox__imageInput" src={URL.createObjectURL(file)} alt="" />
       )}
-      <form className="writeForm" onSubmit={handleSubmit}>
+      <form className="tweetBox" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
             <i className="writeIcon fas fa-plus"></i>
@@ -47,23 +49,17 @@ export default function Write() {
             style={{ display: "none" }}
             onChange={(e) => setFile(e.target.files[0])}
           />
-          <input
-            type="text"
-            placeholder="Title"
-            className="writeInput"
-            autoFocus={true}
-            onChange={e=>setTitle(e.target.value)}
-          />
+
         </div>
-        <div className="writeFormGroup">
+        <div className="tweetBox__input ">
           <textarea
-            placeholder="Tweet here!"
+            placeholder="Add Your Story and Share an image with everyone!"
             type="text"
             className="writeInput writeText"
             onChange={e=>setDesc(e.target.value)}
           ></textarea>
         </div>
-        <button className="writeSubmit" type="submit">
+        <button className="tweetBox__tweetButton" type="submit">
           Tweet
         </button>
       </form>

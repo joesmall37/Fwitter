@@ -22,5 +22,6 @@ export default function Post({ post }) {
       </div>
       <p className="postDesc">{post.desc}</p>
     </div>
+    
   );
 }

@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import { Avatar } from "@material-ui/core";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
@@ -13,21 +15,22 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-twitter-square"></i>
-        <h3>Eat and Tweet</h3>
+        <TwitterIcon className="topbar__twitterIcon" />
+        <h4>Sweat Tweet Eat & Meet </h4>
+        {/* <h3>Eat and Tweet</h3> */}
       </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
-              Eat
+              <h4>Home</h4>
             </Link>
           </li>
-          <li className="topListItem">
+          {/* <li className="topListItem">
             <Link className="link" to="/">
               Sweat
             </Link>
-          </li>
+          </li> */}
           {/* <li className="topListItem">
             <Link className="link" to="/">
 
@@ -35,11 +38,12 @@ export default function TopBar() {
           </li> */}
           <li className="topListItem">
             <Link className="link" to="/write">
-              Tweet
+              <h4>Tweet</h4>
             </Link>
           </li>
           <li className="topListItem" onClick={handleLogout}>
-            {user && "LOGOUT"}
+            {user && <h4>Logout</h4>}
+
           </li>
         </ul>
       </div>
@@ -47,23 +51,24 @@ export default function TopBar() {
         {user ? (
           <Link to="/settings">
             {/* <img className="topImg" src={PF+user.profilePic} alt="" /> */}
-            <h3>Profile</h3>
+            <Avatar src="https://images.pexels.com/photos/3490348/pexels-photo-3490348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
           </Link>
+
         ) : (
           <ul className="topList">
             <li className="topListItem">
               <Link className="link" to="/login">
-                LOGIN
+                <h4>Login</h4>
               </Link>
             </li>
             <li className="topListItem">
               <Link className="link" to="/register">
-                REGISTER
+                <h5>Register</h5>
               </Link>
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
+        {/* <i className="topSearchIcon fas fa-search"></i> */}
       </div>
     </div>
   );

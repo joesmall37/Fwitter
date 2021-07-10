@@ -1,8 +1,9 @@
 import "./settings.css";
-import Sidebar from "../../components/sidebar/Sidebar";
+import SidebarRight from "../../components/SideRight/SideRight";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import { Avatar } from "@material-ui/core";
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -45,18 +46,19 @@ export default function Settings() {
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
-          <span className="settingsUpdateTitle">Update Your Account</span>
+          <span className="settingsUpdateTitle">Update Account</span>
           <span className="settingsDeleteTitle">Delete Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
-          <label>Profile Picture</label>
+          <label>Change Profile Picture</label>
           <div className="settingsPP">
-            <img
+            {/* <img
               src={file ? URL.createObjectURL(file) : PF+user.profilePic}
               alt=""
-            />
+            /> */}
+            <Avatar src="https://images.pexels.com/photos/3490348/pexels-photo-3490348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
             <label htmlFor="fileInput">
-              <i className="settingsPPIcon far fa-user-circle"></i>
+              {/* <i className="settingsPPIcon far fa-user-circle"></i> */}
             </label>
             <input
               type="file"
@@ -94,7 +96,7 @@ export default function Settings() {
           )}
         </form>
       </div>
-      <Sidebar />
+      <SidebarRight />
     </div>
   );
 }

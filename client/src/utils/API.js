@@ -11,3 +11,8 @@ export const login = ({ email, password }) => {
 export const register = ({ email, username, password }) => {
     return axios.post('/api/auth/register', { email, username, password });
 };
+
+
+export const post = () => {
+    return axios.post('api/posts')
+};
