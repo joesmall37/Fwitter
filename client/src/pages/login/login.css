@@ -42,7 +42,7 @@ body {
 .loginButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color:var(--twitter-color);
+  background-color:#013220;
   border: none;
   color: white;
   border-radius: 10px;
@@ -51,17 +51,26 @@ body {
 
 .loginButton:disabled{
   cursor: not-allowed;
-  background-color: var(--twitter-color);
+  background-color: #013220;
+}
+.loginButton:hover{
+  background-color: white;
+  color: #013220;
 }
 
 .loginRegisterButton {
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color:var(--twitter-color);
+  background-color:#013220;
   cursor: pointer;
   border: none;
   padding: 10px;
   color: white;
   border-radius: 10px;
+}
+
+.loginRegisterButton:hover{
+  background-color: white;
+  color: #013220;
 }

@@ -10,22 +10,20 @@ import { useLocation } from "react-router";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
-  const { search } = useLocation();
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts" + search);
+      const res = await axios.get("/api/posts");
       setPosts(res.data);
     };
     fetchPosts();
-  }, [search]);
+  }, []);
   return (
     <>
-      {/* <Header /> */}
       <div className="home">
-        {/* <Feed/> */}
           <Sidebar />
-          <Posts posts={posts} />
+        <Posts posts={posts} />
+
           <SideRight />
       </div>
     </>

@@ -11,7 +11,9 @@ import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 
 function Sidebar() {
   return (
@@ -19,18 +21,28 @@ function Sidebar() {
       <TwitterIcon className="sidebar__twitterIcon" />
 
       <SidebarOption active Icon={HomeIcon} text="Home" />
+
       <SidebarOption Icon={SearchIcon} text="Explore" />
-      <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
+      <SidebarOption Icon={FitnessCenterIcon} text="Group Workouts" />
       <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-      <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" />
+      <SidebarOption Icon={BookmarkBorderIcon} text="Groups" />
       <SidebarOption Icon={ListAltIcon} text="Lists" />
-      <SidebarOption Icon={PermIdentityIcon} text="Profile" />
+      <Link className="link" to="/settings">
+        <SidebarOption Icon={PermIdentityIcon} text="Profile" />
+      </Link>
+
+
+
       <SidebarOption Icon={MoreHorizIcon} text="More" />
 
       {/* Button -> Tweet */}
-      <Button variant="outlined" className="sidebar__tweet" fullWidth>
-        Tweet
+      <Link className="link" to="/write">
+        <Button variant="outlined" className="sidebar__tweet" fullWidth>
+          Tweet
       </Button>
+      </Link>
+
+
     </div>
   );
 }

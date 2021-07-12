@@ -8,14 +8,14 @@
 }
 
 .sidebar__twitterIcon {
-  color: var(--twitter-color);
+  color: #013220;
   font-size: 30px !important;
   margin-left: 20px;
   margin-bottom: 20px;
 }
 
 .sidebar__tweet {
-  background-color: var(--twitter-color) !important;
+  background-color: #013220 !important;
   border: none !important;
   color: white !important;
   font-weight: 900 !important;

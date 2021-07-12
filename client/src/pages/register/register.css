@@ -42,7 +42,7 @@ body {
 .registerButton {
   margin-top: 20px;
   cursor: pointer;
-  background-color: var(--twitter-color);
+  background-color: #013220;
   border: none;
   color: white;
   border-radius: 10px;
@@ -53,10 +53,20 @@ body {
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: var(--twitter-color);
+  background-color: #013220;
   cursor: pointer;
   border: none;
   padding: 10px;
   color: white;
   border-radius: 10px;
+}
+
+.registerLoginButton:hover{
+  background-color: white;
+  color: #013220;
+}
+
+.registerButton:hover{
+  background-color: white;
+  color: #013220;
 }

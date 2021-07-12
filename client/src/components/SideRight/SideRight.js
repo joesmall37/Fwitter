@@ -66,15 +66,16 @@ function Widgets() {
                 />
 
                 <TwitterShareButton
-                    url={"https://facebook.com/cleverprogrammer"}
-                    options={{ text: "#reactjs is awesome", via: "cleverqazi" }}
+                    url={""}
+                    options={{ text: "", via: "username" }}
                 />
 
 
-
-            </div>
+             </div>
         </div>
-    );
-}
+    )
+};
+
+
 
 export default Widgets;

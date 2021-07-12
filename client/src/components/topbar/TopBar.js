@@ -7,7 +7,6 @@ import { Avatar } from "@material-ui/core";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/"
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -16,8 +15,7 @@ export default function TopBar() {
     <div className="top">
       <div className="topLeft">
         <TwitterIcon className="topbar__twitterIcon" />
-        <h4>Sweat Tweet Eat & Meet </h4>
-        {/* <h3>Eat and Tweet</h3> */}
+        <h4>Tweet Eat & Meet </h4>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -26,16 +24,6 @@ export default function TopBar() {
               <h4>Home</h4>
             </Link>
           </li>
-          {/* <li className="topListItem">
-            <Link className="link" to="/">
-              Sweat
-            </Link>
-          </li> */}
-          {/* <li className="topListItem">
-            <Link className="link" to="/">
-
-            </Link>
-          </li> */}
           <li className="topListItem">
             <Link className="link" to="/write">
               <h4>Tweet</h4>
@@ -50,8 +38,7 @@ export default function TopBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            {/* <img className="topImg" src={PF+user.profilePic} alt="" /> */}
-            <Avatar src="https://images.pexels.com/photos/3490348/pexels-photo-3490348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+            <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
           </Link>
 
         ) : (
@@ -63,12 +50,11 @@ export default function TopBar() {
             </li>
             <li className="topListItem">
               <Link className="link" to="/register">
-                <h5>Register</h5>
+                <h4>Register</h4>
               </Link>
             </li>
           </ul>
         )}
-        {/* <i className="topSearchIcon fas fa-search"></i> */}
       </div>
     </div>
   );
