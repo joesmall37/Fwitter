@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 import { Avatar } from "@material-ui/core";
-
+import ChatBox from '../../components/ChatBox/Chatbox'
 export default function Settings() {
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
@@ -97,6 +97,7 @@ export default function Settings() {
         </form>
       </div>
       <SidebarRight />
+      <ChatBox />
     </div>
   );
 }

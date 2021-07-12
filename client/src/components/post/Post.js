@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import "./post.css";
 import { Avatar } from "@material-ui/core";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
-import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+// import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PublishIcon from "@material-ui/icons/Publish";
@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback} from "react";
 import axios from "axios";
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
+import ChatBox from '../../components/ChatBox/Chatbox'
 const Post = forwardRef(
   ({ displayName, username, verified, text, image, avatar, post }, ref) => {
     const [like, setLike] = useState(0);
@@ -70,9 +71,12 @@ const Post = forwardRef(
           <p>
 
           </p>
-
+<hr />
           <div className="post__footer">
-            <ChatBubbleOutlineIcon fontSize="small" />
+            {/* <ChatBubbleOutlineIcon fontSize="small"
+
+            /> */}
+       <ChatBox />
             <RepeatIcon fontSize="small" />
             <span className="postLikeCounter">{like} </span>
             <FavoriteBorderIcon fontSize="small" onClick={likeHandler} />

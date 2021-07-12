@@ -1,0 +1,29 @@
+.card {
+  /* border: 0.1rem red solid; */
+  /* background-color:red; */
+  border-radius: 0.5rem;
+  margin: 1rem;
+
+}
+.card-body {
+  padding: 1rem;
+   /* border: 0.1rem red solid; */
+    /* background-color:red; */
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+   /* border: 0.1rem red solid; */
+    /* background-color:red; */
+}
+/*
+.chatbox {
+    background-color:red;
+} */
+.btn{
+    border-radius: 25px;
+}
+
+
+.message {
+    background-color:red;
+}

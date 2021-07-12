@@ -24,7 +24,8 @@ export default function Home() {
           <Sidebar />
         <Posts posts={posts} />
 
-          <SideRight />
+        <SideRight />
+
       </div>
     </>
   );
