@@ -4,7 +4,7 @@ import { Context } from "../../context/Context";
 import "./topbar.css";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import { Avatar } from "@material-ui/core";
-
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
 
@@ -14,7 +14,8 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <TwitterIcon className="topbar__twitterIcon" />
+        {/* <TwitterIcon className="topbar__twitterIcon" /> */}
+        <DirectionsRunIcon className="topbar__twitterIcon" />
         <h4>Tweet Eat & Meet </h4>
       </div>
       <div className="topCenter">

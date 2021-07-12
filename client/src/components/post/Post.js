@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback} from "react";
 import axios from "axios";
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
-
 const Post = forwardRef(
   ({ displayName, username, verified, text, image, avatar, post }, ref) => {
     const [like, setLike] = useState(0);
@@ -39,15 +38,18 @@ const Post = forwardRef(
       <div className="post" ref={ref}>
         <div className="post__avatar">
           {/* <Avatar src={avatar} /> */}
-          <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+          <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
         </div>
         <div className="post__body">
           <div className="post__header">
             <div className="post__headerText">
               <h3>
-                {displayName}{" "}
+
+                {username}{" "}
                 <span className="post__headerSpecial">
-                  {verified && <VerifiedUserIcon className="post__badge" />} @
+                  <VerifiedUserIcon className="post__badge" />
+                  <br/>
+                @
                   {username}
                 </span>
               </h3>
