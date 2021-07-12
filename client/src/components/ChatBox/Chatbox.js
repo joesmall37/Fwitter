@@ -4,7 +4,10 @@ import { Context } from "../../context/Context";
 import "./Chatbox.css"
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import CloseIcon from '@material-ui/icons/Close';
-import SmsIcon from '@material-ui/icons/Sms';
+// import SmsIcon from '@material-ui/icons/Sms';
+import { Avatar } from "@material-ui/core";
+import TwitterIcon from '@material-ui/icons/Twitter';
+
 
 const ENDPOINT =
     window.location.host.indexOf('localhost') >= 0
@@ -21,8 +24,9 @@ export default function ChatBox(props, post) {
     const uiMessagesRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const [messageBody, setMessageBody] = useState('');
+
     const [messages, setMessages] = useState([
-        { name: 'Twitter', body: 'Enter your comment' },
+        { icon: TwitterIcon,  name: 'Twitter', body: 'Enter your comment' },
     ]);
 
     useEffect(() => {
@@ -84,18 +88,23 @@ export default function ChatBox(props, post) {
                         <button type="button" onClick={closeHandler}>
                                 < CloseIcon fontSize="small"/>
                             </button>
-                    </div>
-                    <ul ref={uiMessagesRef}>
+                        </div>
+                        <ul ref={uiMessagesRef}>
                             {messages.map((msg, index) => (
-                            <p key={index}>
-                                    <SmsIcon/>
+                        <p key={index}>
+                                    <ChatBubbleOutlineIcon type="button" onClick={supportHandler} fontSize="small"
+                                    />
+
                                 <strong className="message">{`${msg.name}: `}</strong> {msg.body}
                             </p>
                         ))}
                     </ul>
-                    <div>
-                        <form onSubmit={submitHandler} className="row">
-                            <input
+                        <div>
+
+                            <form onSubmit={submitHandler} className="row">
+
+                                <input
+
                                 value={messageBody}
                                 onChange={(e) => setMessageBody(e.target.value)}
                                 type="text"

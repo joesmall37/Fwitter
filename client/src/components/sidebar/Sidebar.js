@@ -16,24 +16,50 @@ import { Button } from "@material-ui/core";
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import FlipMove from "react-flip-move";
+import LockIcon from '@material-ui/icons/Lock';
+import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
+import { Context } from "../../context/Context";
+import { useContext } from "react";
+import DriveEtaIcon from '@material-ui/icons/DriveEta';
+
 function Sidebar() {
+  const { user, dispatch } = useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
   return (
     <div className="sidebar">
 {/*
       <TwitterIcon className="sidebar__twitterIcon" /> */}
       <DirectionsRunIcon className="sidebar__twitterIcon" />
       <FlipMove>
+        <Link className="link" to="/home">
+          <SidebarOption Icon={HomeIcon} text="Home" />
+        </Link>
       <SidebarOption active Icon={HomeIcon} text="Home" />
 
       <SidebarOption Icon={SearchIcon} text="Explore" />
       <SidebarOption Icon={FitnessCenterIcon} text="Group Workouts" />
       <SidebarOption Icon={MailOutlineIcon} text="Messages" />
       <SidebarOption Icon={BookmarkBorderIcon} text="Groups" />
-      <SidebarOption Icon={ListAltIcon} text="Lists" />
+        <SidebarOption Icon={ListAltIcon} text="Lists" />
+        {/* login */}
+        <Link className="link" to="/login">
+          <SidebarOption Icon={LockIcon} text={"Login"}/>
+        </Link>
+        {/* register */}
+        <Link className="link" to="/register">
+          <SidebarOption Icon={EmojiEventsIcon} text={"Register"} />
+        </Link>
+
       <Link className="link" to="/settings">
         <SidebarOption Icon={PermIdentityIcon} text="Profile" />
-      </Link>
-
+        </Link>
+        <Link className="link" onClick={handleLogout}>
+          <SidebarOption Icon={DriveEtaIcon} text={user && "Logout"} />
+          {/* {user && <h4>Logout</h4>} */}
+        </Link>
 
 
       <SidebarOption Icon={MoreHorizIcon} text="More" />

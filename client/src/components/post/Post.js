@@ -39,7 +39,7 @@ const Post = forwardRef(
       <div className="post" ref={ref}>
         <div className="post__avatar">
           {/* <Avatar src={avatar} /> */}
-          <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+          <Avatar src="https://images.pexels.com/photos/164186/pexels-photo-164186.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
         </div>
         <div className="post__body">
           <div className="post__header">
