@@ -6,6 +6,9 @@
   align-items: flex-start;
   border-bottom: 1px solid var(--twitter-background);
   padding-bottom: 10px;
+   flex: 1;
+  padding: 10px;
+    border: 1px solid var(--twitter-background);
 }
 
 .tweetBox > form {
@@ -16,6 +19,8 @@
 .tweetBox__input {
   padding: 20px;
   display: flex;
+  border-radius: 20px;
+  border: 2px solid var(--twitter-background);
 }
 
 .tweetBox__input > input {
@@ -23,6 +28,7 @@
   margin-left: 20px;
   font-size: 20px;
   border: none;
+  width: 500px;
 }
 
 .tweetBox__imageInput {
@@ -46,5 +52,5 @@
 .home{
     display: flex;
     flex-direction: row;
-    align-items: space-between;
+    align-items: space-around;
 }

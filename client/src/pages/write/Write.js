@@ -11,6 +11,7 @@ import SideRight from "../../components/SideRight/SideRight"
 const Write = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [avatar, setAvatar] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
   const [tweetMessage, setTweetMessage] = useState("");
@@ -48,7 +49,8 @@ const Write = () => {
         <div className="tweetBox__input">
             <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
           <input
-            onChange = { e => setDesc(e.target.value)}
+              onChange={e => setDesc(e.target.value)}
+              // onChange={e => setAvatar(e.target.value)}
             placeholder="Share something!"
             type="text"
           />

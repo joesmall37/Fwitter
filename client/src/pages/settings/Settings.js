@@ -56,7 +56,7 @@ export default function Settings() {
               src={file ? URL.createObjectURL(file) : PF+user.profilePic}
               alt=""
             /> */}
-            <Avatar src="https://images.pexels.com/photos/3490348/pexels-photo-3490348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+            <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
             <label htmlFor="fileInput">
               {/* <i className="settingsPPIcon far fa-user-circle"></i> */}
             </label>

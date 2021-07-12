@@ -38,6 +38,13 @@ export default function Posts({ posts }) {
             <FlipMove>
             {posts.map((p) => (
               <Post post={p}
+                displayName={p.displayName}
+                username={p.username}
+                verified={p.verified}
+                text={p.text}
+                avatar={p.avatar}
+                image={p.image}
+
               />
             ))}
           </FlipMove>

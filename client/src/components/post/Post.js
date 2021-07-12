@@ -38,7 +38,8 @@ const Post = forwardRef(
     return (
       <div className="post" ref={ref}>
         <div className="post__avatar">
-          <Avatar src={avatar} />
+          {/* <Avatar src={avatar} /> */}
+          <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
         </div>
         <div className="post__body">
           <div className="post__header">
@@ -56,21 +57,22 @@ const Post = forwardRef(
                 <Link to={`/post/${post._id}`} className="link">
                   <p className="postDesc">{post.desc}</p>
                 </Link>
-                <span className="postDate">
-                  {new Date(post.createdAt).toDateString()}
-                </span>
-                <p>
-                  <span className="postLikeCounter">{like} </span>
-                </p>
-
-
               </p>
             </div>
           </div>
           <img src={image} alt="" />
+          <span className="postDate">
+            {new Date(post.createdAt).toDateString()}
+
+          </span>
+          <p>
+
+          </p>
+
           <div className="post__footer">
             <ChatBubbleOutlineIcon fontSize="small" />
             <RepeatIcon fontSize="small" />
+            <span className="postLikeCounter">{like} </span>
             <FavoriteBorderIcon fontSize="small" onClick={likeHandler} />
             <ThumbDownIcon fontSize="small" onClick={likeHandler}/>
             <PublishIcon fontSize="small" />

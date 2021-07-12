@@ -1,5 +1,5 @@
 body {
-  --twitter-color: #50b7f5;
+  --twitter-color: #013220 ;
   --twitter-background: #e6ecf0;
 }
 
@@ -22,11 +22,11 @@ body {
   font-size: 26px;
   /* margin-bottom: 20px; */
   cursor: pointer;
-  color: var(--twitter-color);
+  color:#013220 ;
 }
 
 .settingsDeleteTitle {
-  color: var(--twitter-color);
+  color: #013220 ;
   font-size: 26px;
   cursor: pointer;
 }
@@ -34,7 +34,7 @@ body {
 .settingsForm {
   display: flex;
   flex-direction: column;
-  color: var(--twitter-color);
+  color: #013220 ;
 }
 
 .settingsPP {
@@ -54,7 +54,7 @@ body {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color:var(--twitter-color);
+  background-color:#013220 ;
   color: white;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ body {
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: var(--twitter-color);
+    background-color: #013220 ;
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
