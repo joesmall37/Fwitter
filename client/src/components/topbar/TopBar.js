@@ -30,17 +30,24 @@ export default function TopBar() {
               <h4>Tweet</h4>
             </Link>
           </li>
-          <li className="topListItem" onClick={handleLogout}>
-            {user && <h4>Logout</h4>}
-
-          </li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
+          <div className='topRight'>
           <Link to="/settings">
-            <Avatar src="https://images.pexels.com/photos/164186/pexels-photo-164186.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+            <Avatar className='av'src="https://images.pexels.com/photos/164186/pexels-photo-164186.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
           </Link>
+            <p className="topListItem" onClick={handleLogout}>
+              Welcome,  {user.username}
+              <br />
+              {user && <h4>Logout</h4>}
+
+            </p>
+            </div>
+
+
+
 
         ) : (
           <ul className="topList">

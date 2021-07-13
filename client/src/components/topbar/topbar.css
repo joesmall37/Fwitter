@@ -76,3 +76,14 @@ h5 {
 .topbar__twitterIcon {
   color: white
 }
+
+/* p {
+  margin: 10px;
+} */
+
+.topRight > p {
+  margin: 10px;
+}
+.topRight > av {
+  margin: 10px;
+}

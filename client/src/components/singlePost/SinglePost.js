@@ -81,7 +81,7 @@ export default function SinglePost() {
                 onChange={(e) => setDesc(e.target.value)}
               />
             <br />
-            <div classs="btns">
+            <div classs="singlebtns">
                 <button className="singlePostButton" onClick={handleUpdate}>
                 Update
               </button>

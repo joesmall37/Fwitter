@@ -79,7 +79,7 @@ export default function Settings() {
         </form>
       </div>
       <SidebarRight />
-      <ChatBox />
+      {/* <ChatBox /> */}
     </div>
   );
 }

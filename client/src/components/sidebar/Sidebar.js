@@ -21,7 +21,6 @@ import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 import { Context } from "../../context/Context";
 import { useContext } from "react";
 import DriveEtaIcon from '@material-ui/icons/DriveEta';
-
 function Sidebar() {
   const { user, dispatch } = useContext(Context);
 
@@ -29,21 +28,23 @@ function Sidebar() {
     dispatch({ type: "LOGOUT" });
   };
   return (
+
     <div className="sidebar">
 {/*
       <TwitterIcon className="sidebar__twitterIcon" /> */}
       <DirectionsRunIcon className="sidebar__twitterIcon" />
       <FlipMove>
-        <Link className="link" to="/home">
+        {/* <Link className="link" to="/home">
           <SidebarOption Icon={HomeIcon} text="Home" />
-        </Link>
-      <SidebarOption active Icon={HomeIcon} text="Home" />
-
+        </Link> */}
       <SidebarOption Icon={SearchIcon} text="Explore" />
-      <SidebarOption Icon={FitnessCenterIcon} text="Group Workouts" />
-      <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-      <SidebarOption Icon={BookmarkBorderIcon} text="Groups" />
-        <SidebarOption Icon={ListAltIcon} text="Lists" />
+        <SidebarOption Icon={FitnessCenterIcon} text="Group Workouts" />
+
+          <SidebarOption Icon={MailOutlineIcon} text="Messages" />
+
+
+      <SidebarOption Icon={BookmarkBorderIcon} text=" Workout Groups" />
+        {/* <SidebarOption Icon={ListAltIcon} text="Lists" /> */}
         {/* login */}
         <Link className="link" to="/login">
           <SidebarOption Icon={LockIcon} text={"Login"}/>
@@ -72,7 +73,8 @@ function Sidebar() {
       </Link>
 
 
-    </div>
+      </div>
+
   );
 }
 
