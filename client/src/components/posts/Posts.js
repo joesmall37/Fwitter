@@ -18,10 +18,7 @@ export default function Posts({ posts }) {
                 username={p.username}
                 verified={p.verified}
                 text={p.text}
-                avatar={p.avatar}
-                image={p.image}
                 likes ={p.likes}
-
               />
             ))}
           </FlipMove>

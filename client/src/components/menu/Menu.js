@@ -1,8 +1,8 @@
 
 import React from "react";
-import "./sidebar.css";
+import "./Menu.css";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import SidebarOption from "../sidebaroptions/SideBarOption";
+import SidebarOption from "../menuoptions/MenuOptions";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
@@ -21,6 +21,10 @@ import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 import { Context } from "../../context/Context";
 import { useContext } from "react";
 import DriveEtaIcon from '@material-ui/icons/DriveEta';
+import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
+import LocalDiningIcon from '@material-ui/icons/LocalDining';
+import RestaurantIcon from '@material-ui/icons/Restaurant';
+
 function Sidebar() {
   const { user, dispatch } = useContext(Context);
 
@@ -30,51 +34,32 @@ function Sidebar() {
   return (
 
     <div className="sidebar">
-{/*
-      <TwitterIcon className="sidebar__twitterIcon" /> */}
-      <DirectionsRunIcon className="sidebar__twitterIcon" />
+      <SidebarOption Icon={DirectionsRunIcon} text="Menu" />
       <FlipMove>
-        {/* <Link className="link" to="/home">
-          <SidebarOption Icon={HomeIcon} text="Home" />
-        </Link> */}
-      <SidebarOption Icon={SearchIcon} text="Explore" />
-        <SidebarOption Icon={FitnessCenterIcon} text="Group Workouts" />
-
-          <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-
-
-      <SidebarOption Icon={BookmarkBorderIcon} text=" Workout Groups" />
-        {/* <SidebarOption Icon={ListAltIcon} text="Lists" /> */}
-        {/* login */}
+        <SidebarOption Icon={DirectionsBikeIcon} text="Cardio" />
+        <SidebarOption Icon={FitnessCenterIcon} text="Weights" />
+        <SidebarOption Icon={LocalDiningIcon } text="Diets to gain mass" />
+        <SidebarOption Icon={RestaurantIcon} text="Diets to lose weight" />
+        <SidebarOption Icon={MailOutlineIcon} text="Messages" />
         <Link className="link" to="/login">
           <SidebarOption Icon={LockIcon} text={"Login"}/>
         </Link>
-        {/* register */}
         <Link className="link" to="/register">
           <SidebarOption Icon={EmojiEventsIcon} text={"Register"} />
         </Link>
-
       <Link className="link" to="/settings">
         <SidebarOption Icon={PermIdentityIcon} text="Profile" />
         </Link>
         <Link className="link" onClick={handleLogout}>
           <SidebarOption Icon={DriveEtaIcon} text={user && "Logout"} />
-          {/* {user && <h4>Logout</h4>} */}
         </Link>
-
-
-      <SidebarOption Icon={MoreHorizIcon} text="More" />
       </FlipMove>
-      {/* Button -> Tweet */}
       <Link className="link" to="/write">
         <Button variant="outlined" className="sidebar__tweet" fullWidth>
-          Tweet
+          Fweet
       </Button>
       </Link>
-
-
       </div>
-
   );
 }
 

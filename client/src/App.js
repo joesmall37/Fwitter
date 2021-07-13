@@ -1,8 +1,8 @@
 import Home from "./pages/home/Home";
-import TopBar from "./components/topbar/TopBar";
-import Single from "./pages/single/Single";
-import Write from "./pages/write/Write";
-import Settings from "./pages/settings/Settings";
+import TopBar from "./components/topnav/NavBar";
+import Single from "./pages/edit/Edit";
+import Write from "./pages/tweet/Tweet";
+import Settings from "./pages/profile/Profile";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";

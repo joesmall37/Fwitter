@@ -1,5 +1,7 @@
 .singlePost {
   flex: 9;
+  margin: 50px;
+
 }
 
 .singlePostWrapper {

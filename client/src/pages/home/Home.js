@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 // import Header from "../../components/header/Header";
 import Posts from "../../components/posts/Posts";
-import Sidebar from "../../components/sidebar/Sidebar";
+import Sidebar from "../../components/menu/Menu";
 import "./home.css";
 // import Feed from "../../components/Feed/Feed";
-import SideRight from "../../components/SideRight/SideRight"
+import SideRight from "../../components/trending/Trending"
 import axios from "axios";
 import { useLocation } from "react-router";
 
