@@ -31,8 +31,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "seed": "node scripts/seedDB.js"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "seed": "node scripts/seedDB.js",
   },
   "author": "",
   "license": "ISC",
