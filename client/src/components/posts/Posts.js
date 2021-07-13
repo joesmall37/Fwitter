@@ -44,6 +44,7 @@ export default function Posts({ posts }) {
                 text={p.text}
                 avatar={p.avatar}
                 image={p.image}
+                likes ={p.likes}
 
               />
             ))}

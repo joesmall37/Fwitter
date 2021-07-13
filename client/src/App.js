@@ -8,7 +8,7 @@ import Register from "./pages/register/Register";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
-
+import "./styles.css"
 function App() {
   const { user } = useContext(Context);
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/login">{user ? <Home /> : <Login />}</Route>
         <Route path="/write">{user ? <Write /> : <Register />}</Route>
         <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
-        <Route path="/post/:postId">
+        <Route path="/:postId">
           <Single />
         </Route>
       </Switch>

@@ -24,20 +24,20 @@ const Write = () => {
       username: user.username,
       desc,
     };
-    if (file) {
-      const data = new FormData();
-      const filename = Date.now() + file.name;
-      data.append("name", filename);
-      data.append("file", file);
-      newPost.photo = filename;
-      try {
-        await axios.post("api/posts", data);
-      } catch (err) { }
-    }
+    // if (file) {
+    //   const data = new FormData();
+    //   const filename = Date.now() + file.name;
+    //   data.append("name", filename);
+    //   data.append("file", file);
+    //   newPost.photo = filename;
+    //   try {
+    //     await axios.post("api/posts", data);
+    //   } catch (err) { }
+    // }
     try {
       const res = await axios.post("api/posts", newPost);
       console.log(res.data)
-      // window.location.replace("api/post/" + res.data._id);
+      window.location.replace("/");
     } catch (err) { }
   };
 
@@ -47,7 +47,7 @@ const Write = () => {
     <div className="tweetBox">
       <form onSubmit={handleSubmit}>
         <div className="tweetBox__input">
-            <Avatar src="https://images.pexels.com/photos/422220/pexels-photo-422220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+            <Avatar src="https://images.pexels.com/photos/164186/pexels-photo-164186.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
           <input
               onChange={e => setDesc(e.target.value)}
               // onChange={e => setAvatar(e.target.value)}

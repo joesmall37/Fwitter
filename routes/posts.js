@@ -39,6 +39,31 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+// update likes
+router.put("/likes/:id/", async (req, res) => {
+
+  try {
+    const post = await Post.findById(req.params.id);
+    console.log(req.body)
+      try {
+        const updatedPost = await Post.findByIdAndUpdate(
+          req.params.id,
+          {
+            likes: req.body.like,
+            // $set: req.body.like,
+          },
+          { new: true }
+        );
+        res.status(200).json(updatedPost);
+      } catch (err) {
+        res.status(500).json(err);
+
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //DELETE POST
 router.delete("/:id", async (req, res) => {
   try {
@@ -80,5 +105,6 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;

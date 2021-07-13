@@ -4,36 +4,57 @@ import { Avatar } from "@material-ui/core";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 // import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import FavoriteIcon from "@material-ui/icons/FavoriteBorder";
 import PublishIcon from "@material-ui/icons/Publish";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback} from "react";
 import axios from "axios";
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import ChatBox from '../../components/ChatBox/Chatbox'
+import moment from 'moment';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+
 const Post = forwardRef(
-  ({ displayName, username, verified, text, image, avatar, post }, ref) => {
+  ({ displayName, username, verified, text, image, avatar, post, likes }, ref) => {
     const [like, setLike] = useState(0);
     const [isLiked, setIsLiked] = useState(false);
 
-    useEffect(() => {
-      try {
-        axios.put("/posts/" + post._id + "/like",);
-      } catch (err) { }
-      setIsLiked(prevIsLiked => {
-        setLike(prevLike => prevIsLiked ? prevLike - 1 : prevLike + 1);
-        return !prevIsLiked
-      });
-    }, [post._id])
+    // useEffect(() => {
+    //   try {
+    //     axios.put("/posts/" + post._id + "/like",);
+    //   } catch (err) { }
+    //   setIsLiked(prevIsLiked => {
+    //     setLike(prevLike => prevIsLiked ? prevLike - 1 : prevLike + 1);
+    //     return !prevIsLiked
+    //   });
+    // }, [post._id])
 
     const likeHandler = useCallback(() => {
-      try {
-        axios.put("/posts/" + post._id + "/like",);
-      } catch (err) { }
+      console.log(likes)
       setIsLiked(prevIsLiked => {
         setLike(prevLike => prevIsLiked ? prevLike - 1 : prevLike + 1);
         return !prevIsLiked
       });
+      try {
+
+        axios.put("api/posts/likes/" + post._id,
+          {
+            // like
+            like:
+                isLiked ?
+                  like + 1 :
+               like -1
+
+
+          });
+
+      } catch (err) {
+        console.log(err)
+      }
+      // setIsLiked(prevIsLiked => {
+      //   setLike(prevLike => prevIsLiked ? prevLike - 1 : prevLike + 1);
+      //   return !prevIsLiked
+      // });
     }, [post._id]);
     return (
       <div className="post" ref={ref}>
@@ -65,7 +86,10 @@ const Post = forwardRef(
           </div>
           <img src={image} alt="" />
           <span className="postDate">
-            {new Date(post.createdAt).toDateString()}
+            {/* {new Date(post.createdAt).toDateString()} */}
+
+
+           { moment(post.createdAt).format('h:mm A - MMMM Do YYYY') }
 
           </span>
           <p>
@@ -73,15 +97,15 @@ const Post = forwardRef(
           </p>
 <hr />
           <div className="post__footer">
-            {/* <ChatBubbleOutlineIcon fontSize="small"
+            <ChatBubbleOutlineIcon className="icon"  fontSize="small"
 
-            /> */}
-       <ChatBox />
-            <RepeatIcon fontSize="small" />
-            <span className="postLikeCounter">{like} </span>
-            <FavoriteBorderIcon fontSize="small" onClick={likeHandler} />
-            <ThumbDownIcon fontSize="small" onClick={likeHandler}/>
-            <PublishIcon fontSize="small" />
+            />
+       {/* <ChatBox /> */}
+            <RepeatIcon className="icon"fontSize="small" />
+            <span className="icon">{like} </span>
+            <FavoriteIcon className="icon"fontSize="small" onClick={likeHandler} />
+            {/* <ThumbDownIcon fontSize="small" onClick={likeHandler}/> */}
+            {/* <PublishIcon fontSize="small" /> */}
           </div>
         </div>
       </div>

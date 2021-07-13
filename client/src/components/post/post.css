@@ -8,6 +8,10 @@
   background-color: white;
   margin-bottom: 10px;
 }
+.post:hover {
+  background-color: var(--twitter-background);
+  cursor: pointer;
+}
 
 .post__body {
   flex: 1;
@@ -50,4 +54,11 @@
 }
 hr {
   margin-top: 10px;
+}
+
+
+
+
+.icon {
+    color: #013220;
 }

@@ -68,10 +68,10 @@ function Widgets() {
                 <TwitterShareButton
                     url={""}
                     options={{ text: "", via: "username" }}
-                />
+                /> 
 
 
-             </div>
+              </div>
         </div>
     )
 };
