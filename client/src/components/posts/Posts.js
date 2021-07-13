@@ -8,7 +8,7 @@ export default function Posts({ posts }) {
 
         <div className="feed">
             <div className="feed__header">
-              <h2>#Feed</h2>
+              <h3>#Feed</h3>
             </div>
 
             <FlipMove>

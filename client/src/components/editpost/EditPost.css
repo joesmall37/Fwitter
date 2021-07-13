@@ -1,6 +1,6 @@
 .singlePost {
-  flex: 9;
-  margin: 50px;
+  flex: 0.6;
+  /* margin: 50px; */
 
 }
 
@@ -116,6 +116,7 @@
 
 .singlepost {
   display: flex;
+  flex: 0.6;
   align-items: flex-start;
   border-bottom: 1px solid var(--twitter-background);
   padding-bottom: 10px;
@@ -123,8 +124,10 @@
   border-radius: 25px;
   background-color: #F5F8FA;
   margin-bottom: 10px;
-  width: 700px;
+  /* width: 700px; */
+
 }
+
 
 .singlepost__body {
   flex: 1;
@@ -133,6 +136,7 @@
   border: 1px solid black;
   border-radius: 20px;
   margin: 10px;
+
 }
 /* .singlepost__body:hover {
 } */
@@ -145,16 +149,19 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+
 }
 
 .singlepost__headerDescription {
   margin-bottom: 10px;
   font-size: 15px;
+
 }
 
 .singlepost__headerText > h3 {
   font-size: 15px;
   margin-bottom: 5px;
+     
 }
 
 .singlepost__badge {
