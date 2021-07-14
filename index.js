@@ -5,25 +5,15 @@ const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
-const multer = require("multer");
-const path = require("path");
 const session = require('express-session');
-const http = require ('http');
-const { Server } = require ('socket.io');
+
 
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 
-// mongoose
-//   .connect(process.env.MONGO_URL, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useFindAndModify:true
-//   })
 mongoose.connect(
-  process.env.MONGODB_URL || 'mongodb://localhost/workoutnetwork',
+  process.env.MONGO_URL,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
