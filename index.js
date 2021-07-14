@@ -63,7 +63,6 @@ app.use("/api/posts", postRoute);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// listen at port
 
 app.listen(PORT, () => {
   console.log("Server is running at " + PORT);
