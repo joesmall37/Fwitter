@@ -25,36 +25,38 @@ export default function Register() {
   };
   return (
     <div className="register">
-      <span className="registerTitle">Register</span>
+      <h5>
+        Join Fwitter! </h5>
+      {/* <span className="registerTitle">Sign Up</span> */}
       <form className="registerForm" onSubmit={handleSubmit}>
-        <label>Username</label>
+        <label className="userPassword">Username</label>
         <input
           type="text"
           className="registerInput"
-          placeholder="Enter your username..."
+          placeholder="Enter your username"
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label>Email</label>
+        <label className="userPassword">Email</label>
         <input
           type="text"
           className="registerInput"
-          placeholder="Enter your email..."
+          placeholder="Enter your email"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label>Password</label>
+        <label className="userPassword">Password</label>
         <input
           type="password"
           className="registerInput"
-          placeholder="Enter your password..."
+          placeholder="Enter your password"
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className="registerButton" type="submit">
-          Register
+          Sign Up
         </button>
       </form>
       <button className="registerLoginButton">
         <Link className="link" to="/login">
-          Login
+          Have an account? Login
         </Link>
       </button>
       {error && <span style={{color:"red", marginTop:"10px"}}>Something went wrong!</span>}

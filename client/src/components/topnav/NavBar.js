@@ -14,15 +14,22 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <DirectionsRunIcon className="topbar__twitterIcon" />
-        <h4>Fwitter </h4>
+        <Link className="link" to="/">
+          <DirectionsRunIcon className="topbar__twitterIcon" />
+          <h4>Fwitter </h4>
+        </Link>
+
+
+
+        {/* <DirectionsRunIcon className="topbar__twitterIcon" />
+        <h4>Fwitter </h4> */}
       </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link className="link" to="/">
+            {/* <Link className="link" to="/">
               <h4>Home</h4>
-            </Link>
+            </Link> */}
           </li>
           <li className="topListItem">
             <Link className="link" to="/write">

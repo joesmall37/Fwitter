@@ -1,55 +1,48 @@
 import React from "react";
-import "./Trending.css";
+import "./TrendingLosses.css";
 import {
     TwitterTimelineEmbed,
     TwitterShareButton,
     TwitterTweetEmbed,
     TwitterVideoEmbed
 } from "react-twitter-embed";
-import SearchIcon from "@material-ui/icons/Search";
 
-function Widgets() {
+function TrendingLosses() {
     return (
+
         <div className="widgets">
             <div className="widgets__widgetContainer">
                 <h2> #Trending</h2>
-                {/* <TwitterTweetEmbed tweetId={"1412623232029523973"} />
+                <TwitterTweetEmbed tweetId={"1415295312118358018"} />
                 <TwitterTimelineEmbed
                     sourceType="profile"
-                    screenName="RealSkipBayless"
+                    screenName="LifeStyleSoln"
                     options={{ height: 400 }}
-                /> */}
-                {/* <TwitterVideoEmbed
-                    id={'1405189568916193283'}
-                /> */}
+                />
 
-                <TwitterTweetEmbed tweetId={"1412959480095117316"} />
+                <TwitterTweetEmbed tweetId={"1415403343942496258"} />
                 <TwitterTimelineEmbed
                     sourceType="profile"
-                    screenName="trainer2thepros"
+                    screenName="TinyHomeTakeout
+"
                     options={{ height: 400 }}
                 />
-                <TwitterTweetEmbed tweetId={"1062775348734103552"} />
+                <TwitterTweetEmbed tweetId={"1414658028553445391"} />
                 <TwitterTimelineEmbed
                     sourceType="profile"
-                    screenName="FumaStrength"
+                    screenName="eatbocboc"
                     options={{ height: 400 }}
                 />
-                <TwitterTweetEmbed tweetId={"1413273908535599104"} />
-                <TwitterTimelineEmbed
-                    sourceType="profile"
-                    screenName="elonmusk"
-                    options={{ height: 400 }}
-                />
+                
                 <TwitterShareButton
                     url={""}
                     options={{ text: "", via: "username" }}
                 />
-             </div>
+            </div>
         </div>
     )
 };
 
 
 
-export default Widgets;
+export default TrendingLosses;

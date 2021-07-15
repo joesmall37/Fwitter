@@ -53,10 +53,11 @@ body {
 
 .topListItem {
   margin-right: 20px;
-  /* font-size: 38px; */
+
   font-weight: 300;
   cursor: pointer;
 }
+
 
 .topSearchIcon {
   font-size: 18px;

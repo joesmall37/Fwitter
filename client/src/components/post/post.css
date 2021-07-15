@@ -7,6 +7,7 @@
   border-radius: 25px;
   background-color: white;
   margin-bottom: 10px;
+  padding: 10px;
 }
 .post:hover {
   background-color: var(--twitter-background);
@@ -61,4 +62,13 @@ hr {
 
 .icon {
     color: #013220;
+}
+
+
+.hearticon {
+    color: #013220;
+}
+
+.hearticonred{
+
 }

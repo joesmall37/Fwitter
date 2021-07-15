@@ -25,20 +25,20 @@ export default function Login() {
 
   return (
     <div className="login">
-      <span className="loginTitle">Login</span>
+      <span className="loginTitle">Login to Fwitter</span>
       <form className="loginForm" onSubmit={handleSubmit}>
-        <label>Username</label>
+        <label className="userPassword">Username</label>
         <input
           type="text"
           className="loginInput"
-          placeholder="Enter your username..."
+          placeholder="Enter your username"
           ref={userRef}
         />
-        <label>Password</label>
+        <label className= "userPassword">Password</label>
         <input
           type="password"
           className="loginInput"
-          placeholder="Enter your password..."
+          placeholder="Enter your password"
           ref={passwordRef}
         />
         <button className="loginButton" type="submit" disabled={isFetching}>
@@ -47,7 +47,7 @@ export default function Login() {
       </form>
       <button className="loginRegisterButton">
         <Link className="link" to="/register">
-          Register
+         Don't have an account? Register
         </Link>
       </button>
     </div>

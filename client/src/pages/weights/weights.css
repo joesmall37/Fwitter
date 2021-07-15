@@ -1,0 +1,5 @@
+.weightsMain {
+    display: flex;
+    flex-direction: rows;
+    align-items: space-between;
+}

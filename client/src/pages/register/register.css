@@ -29,9 +29,10 @@ body {
   flex-direction: column;
 }
 
-.registerForm > label {
+/* .registerForm > label {
   margin: 10px 0;
-}
+  color: white;
+} */
 
 .registerInput {
   padding: 10px;
@@ -68,5 +69,22 @@ body {
 
 .registerButton:hover{
   background-color: white;
+  color: #013220;
+}
+
+
+.register > h5 {
+  color: white;
+  background-color: #013220;
+  border-radius: 25px;
+  padding: 15px;
+}
+.register > h5:hover{
+  color: #013220;
+  background-color: white;
+}
+
+
+.userPassword {
   color: #013220;
 }
