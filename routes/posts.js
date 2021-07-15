@@ -50,7 +50,6 @@ router.put("/likes/:id/", async (req, res) => {
           req.params.id,
           {
             likes: req.body.like,
-            // $set: req.body.like,
           },
           { new: true }
         );

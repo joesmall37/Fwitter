@@ -8,8 +8,6 @@ import axios from "axios";
 import { Context } from "../../context/Context";
 
 
-
-
 const Cardio = () => {
     const [desc, setDesc] = useState("");
     const { user } = useContext(Context);

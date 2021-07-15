@@ -7,7 +7,6 @@ const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const session = require('express-session');
 
-
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;

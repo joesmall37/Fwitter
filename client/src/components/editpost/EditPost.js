@@ -15,7 +15,6 @@ export default function SinglePost() {
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  // const [updateMode, setUpdateMode] = useState(true);
 
   useEffect(() => {
     console.log('test')
@@ -70,9 +69,7 @@ export default function SinglePost() {
                 </span>
               </h3>
               <span className="postDate">
-
                  {moment(post.createdAt).format('h:mm A - MMMM Do YYYY')}
-
               </span>
             </div>
               <textarea

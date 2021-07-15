@@ -1,5 +1,5 @@
 body {
-  --twitter-color: #50b7f5;
+  --twitter-color:#013220;
   --twitter-background: #e6ecf0;
 }
 
@@ -58,14 +58,12 @@ body {
   cursor: pointer;
 }
 
-
 .topSearchIcon {
   font-size: 18px;
   color:white;
   cursor: pointer;
   margin-left: 15px;
 }
-
 .topIcon {
   color: white
 }
@@ -77,10 +75,6 @@ h5 {
 .topbar__twitterIcon {
   color: white
 }
-
-/* p {
-  margin: 10px;
-} */
 
 .topRight > p {
   margin: 10px;

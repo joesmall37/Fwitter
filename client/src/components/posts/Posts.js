@@ -5,12 +5,10 @@ import "./posts.css";
 
 export default function Posts({ posts }) {
   return (
-
         <div className="feed">
             <div className="feed__header">
               <h3>#Feed</h3>
             </div>
-
             <FlipMove>
             {posts.map((p) => (
               <Post post={p}
@@ -23,6 +21,5 @@ export default function Posts({ posts }) {
             ))}
           </FlipMove>
       </div >
-
   );
 }

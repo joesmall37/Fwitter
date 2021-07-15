@@ -2,7 +2,6 @@ import React from "react";
 import "./TrendingGains.css";
 import {
     TwitterTimelineEmbed,
-    TwitterShareButton,
     TwitterTweetEmbed,
     TwitterVideoEmbed
 } from "react-twitter-embed";
@@ -28,7 +27,7 @@ function TrendingGains() {
                     screenName="stoolpresidente"
                     options={{ height: 400 }}
                 />
-                
+
             </div>
         </div>
     )

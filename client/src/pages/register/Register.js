@@ -27,7 +27,6 @@ export default function Register() {
     <div className="register">
       <h5>
         Join Fwitter! </h5>
-      {/* <span className="registerTitle">Sign Up</span> */}
       <form className="registerForm" onSubmit={handleSubmit}>
         <label className="userPassword">Username</label>
         <input

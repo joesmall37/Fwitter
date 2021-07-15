@@ -3,21 +3,18 @@
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
-     /* flex: 0.4; */
-  border-right: 1px solid var(--twitter-background);
-  min-width: fit-content;
-  overflow-y: scroll;
-  padding: 10px;
+    border-right: 1px solid var(--twitter-background);
+    min-width: fit-content;
+    overflow-y: scroll;
+    padding: 10px;
 }
-
 .feed {
-  flex: 0.4;
-  border-right: 1px solid var(--twitter-background);
-  min-width: fit-content;
-  overflow-y: scroll;
-  background-color: #F5F8FA;;
-  border-radius: 15px;
-   margin-top: 15px;
-     padding: 10px;
-
+    flex: 0.4;
+    border-right: 1px solid var(--twitter-background);
+    min-width: fit-content;
+    overflow-y: scroll;
+    background-color: #F5F8FA;;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 10px;
 }

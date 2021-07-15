@@ -6,7 +6,6 @@ import axios from "axios";
 import { Avatar } from "@material-ui/core";
 import Sidebar from '../../components/menu/Menu'
 export default function Settings() {
-  const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -78,7 +77,6 @@ export default function Settings() {
         </form>
       </div>
       <SidebarRight />
-      {/* <ChatBox /> */}
     </div>
   );
 }

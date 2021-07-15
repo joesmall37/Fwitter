@@ -23,9 +23,7 @@ export default function Home() {
       <div className="home">
           <Sidebar />
         <Posts posts={posts} />
-
         <SideRight />
-
       </div>
     </>
   );

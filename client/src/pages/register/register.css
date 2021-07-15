@@ -1,5 +1,5 @@
 body {
-  --twitter-color: #50b7f5;
+  --twitter-color: #013220;
   --twitter-background: #e6ecf0;
 }
 
@@ -28,11 +28,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* .registerForm > label {
-  margin: 10px 0;
-  color: white;
-} */
 
 .registerInput {
   padding: 10px;

@@ -4,25 +4,14 @@ import {
     TwitterTimelineEmbed,
     TwitterShareButton,
     TwitterTweetEmbed,
-    TwitterVideoEmbed
 } from "react-twitter-embed";
-import SearchIcon from "@material-ui/icons/Search";
+
 
 function Widgets() {
     return (
         <div className="widgets">
             <div className="widgets__widgetContainer">
                 <h2> #Trending</h2>
-                {/* <TwitterTweetEmbed tweetId={"1412623232029523973"} />
-                <TwitterTimelineEmbed
-                    sourceType="profile"
-                    screenName="RealSkipBayless"
-                    options={{ height: 400 }}
-                /> */}
-                {/* <TwitterVideoEmbed
-                    id={'1405189568916193283'}
-                /> */}
-
                 <TwitterTweetEmbed tweetId={"1412959480095117316"} />
                 <TwitterTimelineEmbed
                     sourceType="profile"
@@ -49,7 +38,5 @@ function Widgets() {
         </div>
     )
 };
-
-
 
 export default Widgets;

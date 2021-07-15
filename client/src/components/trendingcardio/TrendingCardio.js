@@ -6,7 +6,6 @@ import {
     TwitterTweetEmbed,
     TwitterVideoEmbed
 } from "react-twitter-embed";
-import SearchIcon from "@material-ui/icons/Search";
 
 function Widgets() {
     return (
@@ -38,7 +37,5 @@ function Widgets() {
         </div>
     )
 };
-
-
 
 export default Widgets;
