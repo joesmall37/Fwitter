@@ -15,9 +15,8 @@
 <!-- ## Installation  -->
 
 ## Usage
- - As a user I am looking to connect with others using a social media app for my health and fitness needs
- - This app provides the user with a way to send out information about their workouts and diets and view others posts as well
- - The user can interact with others post and have a tailored experience based on their fitness goals
+ - As a user I am looking to connect with others using a social media app for my health and fitness needs.
+ - This app provides the user with a way to send out information about their workouts and diets and view other's posts.
 
 ## Deployed Application
 - [Link to deployed application](https://whispering-fortress-98702.herokuapp.com/)
