@@ -4,7 +4,6 @@ import {
     TwitterTimelineEmbed,
     TwitterShareButton,
     TwitterTweetEmbed,
-    TwitterVideoEmbed
 } from "react-twitter-embed";
 
 function TrendingLosses() {
@@ -33,7 +32,7 @@ function TrendingLosses() {
                     screenName="eatbocboc"
                     options={{ height: 400 }}
                 />
-                
+
                 <TwitterShareButton
                     url={""}
                     options={{ text: "", via: "username" }}

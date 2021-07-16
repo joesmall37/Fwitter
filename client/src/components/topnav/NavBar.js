@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./NavBar.css";
-import TwitterIcon from "@material-ui/icons/Twitter";
 import { Avatar } from "@material-ui/core";
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 export default function TopBar() {

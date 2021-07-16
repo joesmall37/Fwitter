@@ -13,8 +13,7 @@ export default function SinglePost() {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
   const { user } = useContext(Context);
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
+  const [text, setText] = useState("");
 
   useEffect(() => {
     console.log('test')
@@ -23,8 +22,7 @@ export default function SinglePost() {
       const res = await axios.get("/api/posts/" + path);
       console.log(res)
       setPost(res.data);
-      setTitle(res.data.title);
-      setDesc(res.data.desc);
+      setText(res.data.text);
     };
     getPost();
   }, [path]);
@@ -43,8 +41,7 @@ export default function SinglePost() {
     try {
       await axios.put(`/api/posts/${post._id}`, {
         username: user.username,
-        title,
-        desc,
+        text,
       });
 
       window.location.replace("/");
@@ -74,8 +71,8 @@ export default function SinglePost() {
             </div>
               <textarea
                 className="singlepost__headerdescription"
-                value={desc}
-                onChange={(e) => setDesc(e.target.value)}
+          value={text}
+                onChange={(e) => setText(e.target.value)}
               />
             <br />
             <div classs="singlebtns">

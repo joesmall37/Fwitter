@@ -2,10 +2,8 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const authRoute = require("./routes/auth");
-const userRoute = require("./routes/users");
-const postRoute = require("./routes/posts");
 const session = require('express-session');
+const routes = require("./routes");
 
 dotenv.config();
 
@@ -45,9 +43,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(session(sessionOptions));
 
-app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
-app.use("/api/posts", postRoute);
+app.use(routes);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

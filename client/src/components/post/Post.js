@@ -53,9 +53,9 @@ const Post = forwardRef(
               </h3>
             </div>
             <div className="post__headerDescription">
-              <p>{text}
+              <p>
                 <Link to={`/post/${post._id}`} className="link">
-                  <p className="postDesc">{post.desc}</p>
+                  <p className="postDesc">{post.text}</p>
                 </Link>
               </p>
             </div>
