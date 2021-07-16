@@ -39,6 +39,7 @@ const Cardio = () => {
                             type="text"
                         />
                     </div>
+                    
                     <Button
                         type="submit"
                         className="tweetBox__tweetButton"
